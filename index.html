@@ -33,34 +33,39 @@
     }
 
     nav {
-      position: fixed;
-      top: 20px;
-      right: 20px;
       background: #1f497d;
-      border-radius: 18px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-      z-index: 999;
-      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 15px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
     }
 
     nav a {
-      display: block;
       color: white;
       text-decoration: none;
-      padding: 12px 20px;
       font-weight: 600;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
+      background: #3b5998;
+      padding: 12px 18px;
+      border-radius: 8px;
+      transition: 0.3s;
+      font-size: 1em;
     }
 
     nav a:hover {
-      background: #3b5998;
+      background: #5b78d4;
+      transform: scale(1.05);
     }
 
     section {
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
-      font-size: 1.1em;
+      font-size: 1.15em;
     }
 
     h2 {
@@ -89,6 +94,20 @@
       padding: 15px;
       margin: 20px 0;
     }
+
+    .law-card {
+      background: #e9f0ff;
+      border: 2px solid #3b5998;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 30px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .law-card h3 {
+      margin-top: 0;
+      color: #1f497d;
+    }
   </style>
 </head>
 <body>
@@ -102,6 +121,7 @@
   <nav>
     <a href="#pendahuluan">Pendahuluan</a>
     <a href="#gambaran">Gambaran Umum</a>
+    <a href="#dasarhukum">Dasar Hukum</a>
     <a href="#dampak">Dampak</a>
     <a href="#upaya">Upaya & Solusi</a>
     <a href="#penutup">Penutup</a>
@@ -130,6 +150,16 @@
         </ol>
       </li>
     </ul>
+  </section>
+
+  <section id="dasarhukum">
+    <h2>Dasar Hukum & Parameter Pernikahan Usia Dini</h2>
+    <div class="law-card">
+      <p>Berdasarkan UU No. 16 Tahun 2019 (perubahan atas UU No. 1 Tahun 1974):</p>
+      <p>👉 Usia minimal menikah adalah <strong>19 tahun</strong> bagi laki-laki dan perempuan.</p>
+      <p>Pernikahan di bawah usia 19 tahun termasuk pernikahan dini dan hanya dapat dilakukan dengan dispensasi pengadilan.</p>
+      <p><strong>BKKBN</strong> menganjurkan usia ideal menikah: ≥21 tahun (perempuan) dan ≥25 tahun (laki-laki) untuk kesiapan lahir–batin.</p>
+    </div>
   </section>
 
   <section id="dampak">
