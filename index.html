@@ -13,13 +13,15 @@
     background: #f6f8fb;
     margin: 0;
     color: #333;
+    font-size: 18px;
+    line-height: 1.7;
   }
 
   /* HEADER */
   header {
     background: linear-gradient(120deg, #3a0ca3, #4361ee, #4cc9f0);
     color: #fff;
-    padding: 2rem 1rem 4rem;
+    padding: 2.5rem 1rem 6rem;
     text-align: center;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
@@ -28,18 +30,18 @@
   }
 
   header h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
     margin-bottom: 0.3rem;
   }
 
   header h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
-    opacity: 0.9;
+    opacity: 0.95;
   }
 
   header p {
-    margin-top: 0.4rem;
+    margin-top: 0.6rem;
     font-style: italic;
     font-weight: 500;
   }
@@ -48,13 +50,15 @@
   nav {
     background: white;
     border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     display: flex;
     justify-content: center;
     gap: 1rem;
-    padding: 0.8rem 1rem;
-    max-width: 900px;
-    margin: -2rem auto 2rem;
+    padding: 1rem 1.5rem;
+    max-width: 950px;
+    margin: -2.5rem auto 3rem;
+    position: relative;
+    z-index: 10;
     flex-wrap: wrap;
   }
 
@@ -62,9 +66,9 @@
     text-decoration: none;
     color: #3a0ca3;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     background: #edf2ff;
-    padding: 0.6rem 1rem;
+    padding: 0.7rem 1.2rem;
     border-radius: 30px;
     transition: all 0.3s ease;
   }
@@ -74,7 +78,7 @@
     color: #fff;
   }
 
-  /* CONTENT CONTAINER */
+  /* CONTENT */
   main {
     max-width: 1100px;
     margin: auto;
@@ -100,7 +104,7 @@
     border-left: 6px solid #3a0ca3;
     padding-left: 0.6rem;
     color: #3a0ca3;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
   }
 
@@ -108,44 +112,57 @@
     padding-left: 1.3rem;
   }
 
-  .quote {
-    background: #f0f4ff;
-    border-left: 5px solid #4361ee;
-    padding: 1rem;
-    border-radius: 10px;
-    font-style: italic;
-    margin-top: 1rem;
-  }
-
   .data-card {
     background: linear-gradient(120deg, #4cc9f0, #4361ee);
     color: white;
-    padding: 1.5rem;
+    padding: 1.8rem;
     border-radius: 18px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   }
 
   .data-card h4 {
     margin-top: 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     border-bottom: 2px solid rgba(255,255,255,0.4);
     padding-bottom: 0.4rem;
+  }
+
+  .link-list {
+    margin-top: 1rem;
+    background: rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .link-list a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .link-list a:hover {
+    text-decoration: none;
+    color: #d0ebff;
   }
 
   footer {
     text-align: center;
     background: #3a0ca3;
     color: #fff;
-    padding: 1.5rem;
+    padding: 1.8rem;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     margin-top: 3rem;
+    font-size: 0.95rem;
   }
 
   @media (max-width: 600px) {
-    header h1 {font-size: 1.5rem;}
-    nav a {font-size: 0.8rem; padding: 0.5rem 0.8rem;}
-    section {padding: 1.2rem;}
+    body {font-size: 17px;}
+    header h1 {font-size: 1.6rem;}
+    nav a {font-size: 0.85rem; padding: 0.5rem 0.8rem;}
+    section {padding: 1.3rem;}
   }
 </style>
 </head>
@@ -254,19 +271,24 @@
 
   <section id="penutup">
     <h3>V. Penutup</h3>
-    <p>“Agama tidak melarang menikah muda, tetapi agama menolak pernikahan yang dilakukan tanpa kesiapan. Karena pernikahan bukan sekadar penyatuan dua hati, melainkan amanah untuk membangun masa depan generasi”</p>
-    <p>Dari sisi agama, pernikahan adalah ibadah dan amanah besar yang menuntut kesiapan lahir dan batin. Islam tidak menolak menikah muda, tetapi menekankan kematangan iman, akal, dan tanggung jawab  menuju rumah tangga yang sakinah mawaddah  warahmah</p>
+    <p>“Agama tidak melarang menikah muda, tetapi agama menolak pernikahan yang dilakukan tanpa kesiapan. Karena pernikahan bukan sekadar penyatuan dua hati, melainkan amanah untuk membangun masa depan generasi.”</p>
+    <p>Dari sisi agama, pernikahan adalah ibadah dan amanah besar yang menuntut kesiapan lahir dan batin. Islam tidak menolak menikah muda, tetapi menekankan kematangan iman, akal, dan tanggung jawab menuju rumah tangga yang sakinah mawaddah warahmah.</p>
     <p>Pernikahan dini tanpa kesiapan sering bertentangan dengan tujuan syariat (maqashid syariah) yang menjaga agama, jiwa, akal, keturunan, dan harta. Karena itu, menunda pernikahan hingga siap bukan bentuk penolakan terhadap sunnah, tetapi wujud kehati-hatian dan tanggung jawab moral.</p>
     <p>“Menikah itu ibadah, tapi kesiapan adalah syarat agar ibadah itu membawa berkah, bukan penyesalan.”</p>
-    <p>Pernikahan adalah ikatan suci dan tanggung jawab sosial yang menuntut kesiapan lahir dan batin. Di Maluku Utara, upaya menekan angka pernikahan dini dan perceraian muda membutuhkan kolaborasi lintas sektor: pemerintah, lembaga agama, sekolah, tokoh adat, dan keluarga.</p>
-    <p>Kita semua memiliki peran penting untuk membangun generasi yang matang, bertanggung jawab, dan berdaya saing, agar rumah tangga muda tidak menjadi sumber masalah, tetapi menjadi fondasi bagi masa depan masyarakat Maluku Utara yang lebih sejahtera.</p>
     <p><strong>Kutipan Inspiratif untuk Penutup Presentasi:</strong><br>
     “Menikah bukan karena usia telah cukup, tetapi karena kesiapan jiwa dan tanggung jawab telah tumbuh.”</p>
   </section>
 
   <section id="data" class="data-card">
     <h4>Sumber Data</h4>
-    <p>Berdasarkan data Badan Pusat Statistik (BPS) dan BKKBN tahun 2024, Provinsi Maluku Utara masih mencatat angka pernikahan usia dini sebesar 17,12% pada kelompok perempuan usia 20–24 tahun yang menikah sebelum berusia 18 tahun. Angka ini termasuk yang tertinggi di kawasan timur Indonesia, dengan konsentrasi kasus tertinggi terjadi di Kabupaten Halmahera Selatan dan Pulau Morotai, di mana pada tahun 2023 tercatat lebih dari 200 kasus pernikahan anak. Sebagian besar penyebabnya adalah kehamilan pranikah, faktor ekonomi keluarga, serta pengaruh norma sosial yang masih menoleransi kawin muda. (Sumber: Badan Pusat Statistik Provinsi Maluku Utara, 2024; Satu Data Kementerian Agama, 2023).</p>
+    <p>Berdasarkan data Badan Pusat Statistik (BPS) dan BKKBN tahun 2024, Provinsi Maluku Utara masih mencatat angka pernikahan usia dini sebesar 17,12% pada kelompok perempuan usia 20–24 tahun yang menikah sebelum berusia 18 tahun...</p>
+
+    <div class="link-list">
+      <p><strong>Berikut beberapa link sumber data resmi:</strong></p>
+      <a href="https://www.bps.go.id/id/statistics-table/2/MTM2MCMy/proporsi-perempuan-umur-20-24-tahun-yang-berstatus-kawin-atau-berstatus-hidup-bersama-sebelum-umur-18-tahun-menurut-provinsi.html" target="_blank">📊 Proporsi perempuan 20–24 tahun menikah sebelum umur 18 tahun – BPS</a>
+      <a href="https://satudata.kemenag.go.id/dataset/detail/jumlah-peristiwa-nikah-menurut-lokasi-nikah" target="_blank">📑 Jumlah peristiwa nikah menurut provinsi – Kementerian Agama</a>
+      <a href="https://opendata.malutprov.go.id/dataset/data-usia-perkawinan-pertama-dibawah-18-tahun-di-provinsi-maluku-utara" target="_blank">🌐 Dataset usia perkawinan pertama di bawah 18 tahun – Open Data Malut</a>
+    </div>
   </section>
 
 </main>
