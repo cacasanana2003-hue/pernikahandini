@@ -1,246 +1,279 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MATERI SEMINAR DIALOG INTERAKTIF - Pernikahan Dini dan Problematikanya</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MATERI SEMINAR DIALOG INTERAKTIF - Pernikahan Dini dan Problematikanya</title>
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f5f7fa;
-      margin: 0;
-      padding: 0;
-      color: #222;
-    }
+<style>
+  * {box-sizing: border-box;}
+  html {scroll-behavior: smooth;}
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f6f8fb;
+    margin: 0;
+    color: #333;
+  }
 
-    header {
-      background: linear-gradient(135deg, #4c6ef5, #15aabf);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+  /* HEADER */
+  header {
+    background: linear-gradient(120deg, #3a0ca3, #4361ee, #4cc9f0);
+    color: #fff;
+    padding: 2rem 1rem 4rem;
+    text-align: center;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    position: relative;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+  }
 
-    header h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.5px;
-    }
+  header h1 {
+    font-size: 1.9rem;
+    margin-bottom: 0.3rem;
+  }
 
-    header h2 {
-      font-size: 1.1rem;
-      font-weight: 400;
-      opacity: 0.9;
-    }
+  header h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+  }
 
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem 1rem;
-      max-width: 1200px;
-      margin: auto;
-    }
+  header p {
+    margin-top: 0.4rem;
+    font-style: italic;
+    font-weight: 500;
+  }
 
-    .card {
-      background: white;
-      border-radius: 18px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      padding: 1.8rem;
-      line-height: 1.6;
-      transition: all 0.3s ease;
-    }
+  /* NAVIGATION */
+  nav {
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    max-width: 900px;
+    margin: -2rem auto 2rem;
+    flex-wrap: wrap;
+  }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-    }
+  nav a {
+    text-decoration: none;
+    color: #3a0ca3;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: #edf2ff;
+    padding: 0.6rem 1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
 
-    .card h3 {
-      color: #0b7285;
-      border-left: 5px solid #4c6ef5;
-      padding-left: 0.7rem;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-    }
+  nav a:hover {
+    background: #3a0ca3;
+    color: #fff;
+  }
 
-    .card p, .card ul, .card li, .card ol {
-      font-size: 0.95rem;
-    }
+  /* CONTENT CONTAINER */
+  main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    gap: 2rem;
+  }
 
-    ul, ol {
-      padding-left: 1.3rem;
-    }
+  section {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
 
-    .quote {
-      background: #edf2ff;
-      border-left: 5px solid #4c6ef5;
-      padding: 1rem;
-      border-radius: 10px;
-      font-style: italic;
-      margin-top: 1rem;
-    }
+  section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
 
-    footer {
-      background: #4c6ef5;
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 2rem;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      font-size: 0.9rem;
-    }
+  section h3 {
+    border-left: 6px solid #3a0ca3;
+    padding-left: 0.6rem;
+    color: #3a0ca3;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
 
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.4rem;
-      }
-      header h2 {
-        font-size: 1rem;
-      }
-      .card {
-        padding: 1.3rem;
-      }
-    }
-  </style>
+  section ul, section ol {
+    padding-left: 1.3rem;
+  }
+
+  .quote {
+    background: #f0f4ff;
+    border-left: 5px solid #4361ee;
+    padding: 1rem;
+    border-radius: 10px;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+
+  .data-card {
+    background: linear-gradient(120deg, #4cc9f0, #4361ee);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .data-card h4 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    padding-bottom: 0.4rem;
+  }
+
+  footer {
+    text-align: center;
+    background: #3a0ca3;
+    color: #fff;
+    padding: 1.5rem;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 600px) {
+    header h1 {font-size: 1.5rem;}
+    nav a {font-size: 0.8rem; padding: 0.5rem 0.8rem;}
+    section {padding: 1.2rem;}
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1><strong>MATERI SEMINAR DIALOG INTERAKTIF</strong></h1>
-    <h2>“Pernikahan Dini dan Problematikanya”</h2>
-    <p><em>Pemateri: Dr. Asrul Gailea, SE., M.Si</em></p>
-  </header>
 
-  <main class="container">
+<header>
+  <h1><strong>MATERI SEMINAR DIALOG INTERAKTIF</strong></h1>
+  <h2>“Pernikahan Dini dan Problematikanya”</h2>
+  <p><em>Pemateri: Dr. Asrul Gailea, SE., M.Si</em></p>
+</header>
 
-    <div class="card">
-      <h3>I. Pendahuluan</h3>
-      <p>
-        Fenomena pernikahan dini dan kawin muda masih menjadi realitas sosial yang kuat di sejumlah daerah di Indonesia, termasuk Provinsi Maluku Utara. Faktor budaya, ekonomi, pendidikan, dan minimnya pemahaman tentang kesiapan emosional seringkali menjadi latar utama yang mendorong terjadinya pernikahan di usia muda.
-      </p>
-      <p>
-        Namun, di sisi lain, angka perceraian di usia muda juga meningkat, menandakan bahwa banyak pasangan belum siap menghadapi tanggung jawab dan dinamika kehidupan berumah tangga.
-      </p>
-      <p>
-        Fenomena ini penting dibahas karena menyangkut masa depan generasi muda, kualitas keluarga, dan pembangunan sosial daerah.
-      </p>
-    </div>
+<nav>
+  <a href="#pendahuluan">Pendahuluan</a>
+  <a href="#gambaran">Gambaran Umum</a>
+  <a href="#dampak">Dampak</a>
+  <a href="#solusi">Solusi</a>
+  <a href="#penutup">Penutup</a>
+  <a href="#data">Data</a>
+</nav>
 
-    <div class="card">
-      <h3>II. Gambaran Umum di Maluku Utara</h3>
-      <ul>
-        <li>Berdasarkan data BKKBN dan Pengadilan Agama (data terkini ……..,) Maluku Utara masih menunjukkan tingginya angka pernikahan di bawah usia 20 tahun.</li>
-        <li>Perceraian usia muda meningkat, terutama dalam 5 tahun pertama pernikahan.</li>
-        <li>Faktor yang dominan meliputi:
-          <ol>
-            <li>Ekonomi – kurangnya penghasilan tetap dan kesiapan finansial.</li>
-            <li>Pendidikan rendah – banyak yang menikah sebelum menyelesaikan sekolah.</li>
-            <li>Budaya dan tekanan sosial – norma masyarakat masih menilai menikah muda sebagai hal wajar.</li>
-            <li>Kurangnya edukasi seksual dan reproduksi.</li>
-            <li>Pengaruh media sosial – gaya hidup dan romantisasi hubungan muda-mudi yang tidak realistis.</li>
-          </ol>
-        </li>
-      </ul>
-    </div>
+<main>
 
-    <div class="card">
-      <h3>III. Dampak Pernikahan Dini dan Perceraian Usia Muda</h3>
-      <ol>
-        <li><strong>Dampak Psikologis</strong>
-          <ul>
-            <li>Ketidakstabilan emosi dan konflik rumah tangga dini.</li>
-            <li>Depresi, stres, dan kehilangan arah hidup terutama bagi perempuan muda.</li>
-          </ul>
-        </li>
-        <li><strong>Dampak Sosial</strong>
-          <ul>
-            <li>Meningkatnya keluarga tidak harmonis dan anak yang kurang mendapat perhatian.</li>
-            <li>Potensi kemiskinan baru akibat tidak siapnya pasangan membangun ekonomi keluarga.</li>
-          </ul>
-        </li>
-        <li><strong>Dampak Pendidikan dan Karier</strong>
-          <ul>
-            <li>Putus sekolah.</li>
-            <li>Hilangnya peluang pengembangan diri dan pekerjaan yang layak.</li>
-          </ul>
-        </li>
-        <li><strong>Dampak Kesehatan Reproduksi</strong>
-          <ul>
-            <li>Risiko kehamilan usia dini dan komplikasi persalinan.</li>
-            <li>Kurangnya pengetahuan tentang kesehatan ibu dan anak.</li>
-          </ul>
-        </li>
-      </ol>
-    </div>
+  <section id="pendahuluan">
+    <h3>I. Pendahuluan</h3>
+    <p>Fenomena pernikahan dini dan kawin muda masih menjadi realitas sosial yang kuat di sejumlah daerah di Indonesia, termasuk Provinsi Maluku Utara. Faktor budaya, ekonomi, pendidikan, dan minimnya pemahaman tentang kesiapan emosional seringkali menjadi latar utama yang mendorong terjadinya pernikahan di usia muda.</p>
+    <p>Namun, di sisi lain, angka perceraian di usia muda juga meningkat, menandakan bahwa banyak pasangan belum siap menghadapi tanggung jawab dan dinamika kehidupan berumah tangga.</p>
+    <p>Fenomena ini penting dibahas karena menyangkut masa depan generasi muda, kualitas keluarga, dan pembangunan sosial daerah.</p>
+  </section>
 
-    <div class="card">
-      <h3>IV. Upaya Pencegahan dan Solusi</h3>
-      <ol>
-        <li><strong>Pendidikan dan Literasi Keluarga</strong>
-          <ul>
-            <li>Memperkuat peran sekolah, lembaga keagamaan, dan orang tua dalam memberikan pendidikan seksualitas dan kesehatan reproduksi.</li>
-            <li>Mendorong program “Generasi Berencana (GenRe)” BKKBN agar lebih aktif di kalangan remaja.</li>
-          </ul>
-        </li>
-        <li><strong>Pendekatan Sosial-Budaya</strong>
-          <ul>
-            <li>Melibatkan tokoh agama, adat, dan masyarakat untuk mengubah pandangan tradisional yang melegitimasi kawin muda.</li>
-            <li>Kampanye sosial “Menikah Bukan Sekadar Siap, Tapi Harus Layak.”</li>
-          </ul>
-        </li>
-        <li><strong>Pemberdayaan Ekonomi dan Pendidikan</strong>
-          <ul>
-            <li>Meningkatkan akses pendidikan menengah dan pelatihan keterampilan bagi remaja.</li>
-            <li>Program pendampingan remaja perempuan agar memiliki kemandirian ekonomi.</li>
-          </ul>
-        </li>
-        <li><strong>Peran Pemerintah dan Lembaga Hukum</strong>
-          <ul>
-            <li>Memperketat izin dispensasi nikah.</li>
-            <li>Menyediakan layanan konseling pra-nikah dan pasca-pernikahan.</li>
-          </ul>
-        </li>
-      </ol>
-    </div>
+  <section id="gambaran">
+    <h3>II. Gambaran Umum di Maluku Utara</h3>
+    <ul>
+      <li>Berdasarkan data BKKBN dan Pengadilan Agama (data terkini ……..,) Maluku Utara masih menunjukkan tingginya angka pernikahan di bawah usia 20 tahun.</li>
+      <li>Perceraian usia muda meningkat, terutama dalam 5 tahun pertama pernikahan.</li>
+      <li>Faktor yang dominan meliputi:
+        <ol>
+          <li>Ekonomi – kurangnya penghasilan tetap dan kesiapan finansial.</li>
+          <li>Pendidikan rendah – banyak yang menikah sebelum menyelesaikan sekolah.</li>
+          <li>Budaya dan tekanan sosial – norma masyarakat masih menilai menikah muda sebagai hal wajar.</li>
+          <li>Kurangnya edukasi seksual dan reproduksi.</li>
+          <li>Pengaruh media sosial – gaya hidup dan romantisasi hubungan muda-mudi yang tidak realistis.</li>
+        </ol>
+      </li>
+    </ul>
+  </section>
 
-    <div class="card">
-      <h3>V. Penutup</h3>
-      <p>
-        “Agama tidak melarang menikah muda, tetapi agama menolak pernikahan yang dilakukan tanpa kesiapan. Karena pernikahan bukan sekadar penyatuan dua hati, melainkan amanah untuk membangun masa depan generasi”
-      </p>
-      <p>
-        Dari sisi agama, pernikahan adalah ibadah dan amanah besar yang menuntut kesiapan lahir dan batin. Islam tidak menolak menikah muda, tetapi menekankan kematangan iman, akal, dan tanggung jawab  menuju rumah tangga yang sakinah mawaddah  warahmah
-      </p>
-      <p>
-        Pernikahan dini tanpa kesiapan sering bertentangan dengan tujuan syariat (maqashid syariah) yang menjaga agama, jiwa, akal, keturunan, dan harta. Karena itu, menunda pernikahan hingga siap bukan bentuk penolakan terhadap sunnah, tetapi wujud kehati-hatian dan tanggung jawab moral.
-      </p>
-      <p>
-        “Menikah itu ibadah, tapi kesiapan adalah syarat agar ibadah itu membawa berkah, bukan penyesalan.”
-      </p>
-      <p>
-        Pernikahan adalah ikatan suci dan tanggung jawab sosial yang menuntut kesiapan lahir dan batin. Di Maluku Utara, upaya menekan angka pernikahan dini dan perceraian muda membutuhkan kolaborasi lintas sektor: pemerintah, lembaga agama, sekolah, tokoh adat, dan keluarga.
-      </p>
-      <p>
-        Kita semua memiliki peran penting untuk membangun generasi yang matang, bertanggung jawab, dan berdaya saing, agar rumah tangga muda tidak menjadi sumber masalah, tetapi menjadi fondasi bagi masa depan masyarakat Maluku Utara yang lebih sejahtera.
-      </p>
-      <p><strong>Kutipan Inspiratif untuk Penutup Presentasi:</strong><br>
-        “Menikah bukan karena usia telah cukup, tetapi karena kesiapan jiwa dan tanggung jawab telah tumbuh.”
-      </p>
-      <p>
-        Berdasarkan data Badan Pusat Statistik (BPS) dan BKKBN tahun 2024, Provinsi Maluku Utara masih mencatat angka pernikahan usia dini sebesar 17,12% pada kelompok perempuan usia 20–24 tahun yang menikah sebelum berusia 18 tahun. Angka ini termasuk yang tertinggi di kawasan timur Indonesia, dengan konsentrasi kasus tertinggi terjadi di Kabupaten Halmahera Selatan dan Pulau Morotai, di mana pada tahun 2023 tercatat lebih dari 200 kasus pernikahan anak. Sebagian besar penyebabnya adalah kehamilan pranikah, faktor ekonomi keluarga, serta pengaruh norma sosial yang masih menoleransi kawin muda. (Sumber: Badan Pusat Statistik Provinsi Maluku Utara, 2024; Satu Data Kementerian Agama, 2023).
-      </p>
-    </div>
-  </main>
+  <section id="dampak">
+    <h3>III. Dampak Pernikahan Dini dan Perceraian Usia Muda</h3>
+    <ol>
+      <li><strong>Dampak Psikologis</strong>
+        <ul>
+          <li>Ketidakstabilan emosi dan konflik rumah tangga dini.</li>
+          <li>Depresi, stres, dan kehilangan arah hidup terutama bagi perempuan muda.</li>
+        </ul>
+      </li>
+      <li><strong>Dampak Sosial</strong>
+        <ul>
+          <li>Meningkatnya keluarga tidak harmonis dan anak yang kurang mendapat perhatian.</li>
+          <li>Potensi kemiskinan baru akibat tidak siapnya pasangan membangun ekonomi keluarga.</li>
+        </ul>
+      </li>
+      <li><strong>Dampak Pendidikan dan Karier</strong>
+        <ul>
+          <li>Putus sekolah.</li>
+          <li>Hilangnya peluang pengembangan diri dan pekerjaan yang layak.</li>
+        </ul>
+      </li>
+      <li><strong>Dampak Kesehatan Reproduksi</strong>
+        <ul>
+          <li>Risiko kehamilan usia dini dan komplikasi persalinan.</li>
+          <li>Kurangnya pengetahuan tentang kesehatan ibu dan anak.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
 
-  <footer>
-    Ka. Karo Kesra Malut &nbsp; | &nbsp; 2025
-  </footer>
+  <section id="solusi">
+    <h3>IV. Upaya Pencegahan dan Solusi</h3>
+    <ol>
+      <li><strong>Pendidikan dan Literasi Keluarga</strong>
+        <ul>
+          <li>Memperkuat peran sekolah, lembaga keagamaan, dan orang tua dalam memberikan pendidikan seksualitas dan kesehatan reproduksi.</li>
+          <li>Mendorong program “Generasi Berencana (GenRe)” BKKBN agar lebih aktif di kalangan remaja.</li>
+        </ul>
+      </li>
+      <li><strong>Pendekatan Sosial-Budaya</strong>
+        <ul>
+          <li>Melibatkan tokoh agama, adat, dan masyarakat untuk mengubah pandangan tradisional yang melegitimasi kawin muda.</li>
+          <li>Kampanye sosial “Menikah Bukan Sekadar Siap, Tapi Harus Layak.”</li>
+        </ul>
+      </li>
+      <li><strong>Pemberdayaan Ekonomi dan Pendidikan</strong>
+        <ul>
+          <li>Meningkatkan akses pendidikan menengah dan pelatihan keterampilan bagi remaja.</li>
+          <li>Program pendampingan remaja perempuan agar memiliki kemandirian ekonomi.</li>
+        </ul>
+      </li>
+      <li><strong>Peran Pemerintah dan Lembaga Hukum</strong>
+        <ul>
+          <li>Memperketat izin dispensasi nikah.</li>
+          <li>Menyediakan layanan konseling pra-nikah dan pasca-pernikahan.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section id="penutup">
+    <h3>V. Penutup</h3>
+    <p>“Agama tidak melarang menikah muda, tetapi agama menolak pernikahan yang dilakukan tanpa kesiapan. Karena pernikahan bukan sekadar penyatuan dua hati, melainkan amanah untuk membangun masa depan generasi”</p>
+    <p>Dari sisi agama, pernikahan adalah ibadah dan amanah besar yang menuntut kesiapan lahir dan batin. Islam tidak menolak menikah muda, tetapi menekankan kematangan iman, akal, dan tanggung jawab  menuju rumah tangga yang sakinah mawaddah  warahmah</p>
+    <p>Pernikahan dini tanpa kesiapan sering bertentangan dengan tujuan syariat (maqashid syariah) yang menjaga agama, jiwa, akal, keturunan, dan harta. Karena itu, menunda pernikahan hingga siap bukan bentuk penolakan terhadap sunnah, tetapi wujud kehati-hatian dan tanggung jawab moral.</p>
+    <p>“Menikah itu ibadah, tapi kesiapan adalah syarat agar ibadah itu membawa berkah, bukan penyesalan.”</p>
+    <p>Pernikahan adalah ikatan suci dan tanggung jawab sosial yang menuntut kesiapan lahir dan batin. Di Maluku Utara, upaya menekan angka pernikahan dini dan perceraian muda membutuhkan kolaborasi lintas sektor: pemerintah, lembaga agama, sekolah, tokoh adat, dan keluarga.</p>
+    <p>Kita semua memiliki peran penting untuk membangun generasi yang matang, bertanggung jawab, dan berdaya saing, agar rumah tangga muda tidak menjadi sumber masalah, tetapi menjadi fondasi bagi masa depan masyarakat Maluku Utara yang lebih sejahtera.</p>
+    <p><strong>Kutipan Inspiratif untuk Penutup Presentasi:</strong><br>
+    “Menikah bukan karena usia telah cukup, tetapi karena kesiapan jiwa dan tanggung jawab telah tumbuh.”</p>
+  </section>
+
+  <section id="data" class="data-card">
+    <h4>Sumber Data</h4>
+    <p>Berdasarkan data Badan Pusat Statistik (BPS) dan BKKBN tahun 2024, Provinsi Maluku Utara masih mencatat angka pernikahan usia dini sebesar 17,12% pada kelompok perempuan usia 20–24 tahun yang menikah sebelum berusia 18 tahun. Angka ini termasuk yang tertinggi di kawasan timur Indonesia, dengan konsentrasi kasus tertinggi terjadi di Kabupaten Halmahera Selatan dan Pulau Morotai, di mana pada tahun 2023 tercatat lebih dari 200 kasus pernikahan anak. Sebagian besar penyebabnya adalah kehamilan pranikah, faktor ekonomi keluarga, serta pengaruh norma sosial yang masih menoleransi kawin muda. (Sumber: Badan Pusat Statistik Provinsi Maluku Utara, 2024; Satu Data Kementerian Agama, 2023).</p>
+  </section>
+
+</main>
+
+<footer>
+  Ka. Karo Kesra Malut &nbsp; | &nbsp; 2025
+</footer>
+
 </body>
 </html>
